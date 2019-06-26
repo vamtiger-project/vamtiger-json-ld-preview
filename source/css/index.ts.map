@@ -1,0 +1,1 @@
+{"version":3,"sources":["source/css/index.css"],"names":[],"mappings":"AAAA,MAEI,kBAAmB,AACnB,qBAAsB,AACtB,WAAa,CAChB","file":"source/css/index.css","sourcesContent":[":host\n{\n    position: relative;\n    display: inline-block;\n    width: 100vw;\n}"]}

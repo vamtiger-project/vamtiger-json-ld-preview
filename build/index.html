@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="A webcomponent for viewing json-ld data">
+
+        <title>VAMTIGER JSON-LD Viewer</title>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mocha/mocha.css">
+        <link rel="stylesheet" href="test.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/mocha/mocha.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chai/chai.js"></script>
+        <script
+            src="https://vamtiger-project.github.io/vamtiger-browser-support/build/vamtiger-browser-support.js"
+            data-es2015-support-primary
+            data-element-query-support
+            data-web-component-support
+            data-fetch-support
+            data-load="test/browser.js"
+        ></script>
+    </head>
+
+    <body>
+        <section id="mocha">
+            <header>
+                <h1>
+                    vamtiger-json-ld-viewer
+                </h1>
+            </header>
+        </section>
+
+        <vamtiger-json-ld-viewer data-json-ld="https://vamtiger-project.github.io/vamtiger-mental-health-botswana-json-ld/build/vamtiger-mental-health-botswana-2018-json-ld.js"></vamtiger-json-ld-viewer>
+    </body>
+</html>

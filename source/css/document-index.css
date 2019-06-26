@@ -1,0 +1,92 @@
+vamtiger-json-ld-viewer {
+    & article,
+    & heading,
+    & section,
+    & h1,
+    & h2,
+    & h3,
+    & p,
+    & div
+    {
+        margin: 0;
+        padding: 0;
+    }
+
+    & > *
+    {
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    & [data-heading],
+    & [data-subheading]
+    {
+        font-weight: bold;
+    }
+
+    & [data-heading]
+    {
+        font-size: 1em;
+    }
+
+    & [data-subheading]
+    {
+        font-size: 0.9em;
+    }
+
+    & [data-uppercase]
+    {
+        text-transform: uppercase;
+    }
+
+    & [slot="vamtiger-json-ld-viewer-cards"],
+    & [slot="vamtiger-json-ld-viewer-tables"]
+    {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    & [slot="vamtiger-json-ld-viewer-tables"]
+    {
+        & > *,
+        & [data-header] > *
+        {
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+        }
+    }
+
+    & [data-table]
+    {
+        display: table;
+
+        & [data-row]
+        {
+            display: table-row;
+
+            & [data-cell]
+            {
+                display: table-cell;
+
+                & [data-cell-content]
+                {
+                    font-size: 0.8em;
+                    padding-top: 0.5em;
+                    padding-bottom: 0.5em;
+                }
+            }
+
+            & [data-cell][data-row-heading]
+            {
+                & [data-cell-content]
+                {
+                    font-weight: bold;
+                }
+            }
+
+            & [data-row-copy]
+            {
+                padding-left: 1em;
+            }
+        }
+    }
+}
