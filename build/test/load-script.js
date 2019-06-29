@@ -19,7 +19,7 @@ exports.default = () => describe('vamtiger-json-ld-viewer', function () {
             });
         });
     });
-    it('load script', function () {
+    it.skip('load script', function () {
         return __awaiter(this, void 0, void 0, function* () {
             const script = document.head.querySelector('[src="vamtiger-json-ld-viewer.js"]');
             chai_1.expect(script instanceof HTMLScriptElement).to.be.true;
