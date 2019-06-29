@@ -12,7 +12,7 @@ export default async function(params: IViewJsonLd) {return new Promise((resolve,
     if (requestIdleCallback) {
         requestIdleCallback(() => viewJsonLd(params).then(resolve))
     } else {
-        viewJsonLd(params).then(resolve)
+        setTimeout(() => viewJsonLd(params).then(resolve), 0)
     }
 })}
 
@@ -24,5 +24,5 @@ async function viewJsonLd({ element, newValue: jsonLdUrl }: IViewJsonLd) {
         if (tableArticle) {
             element.appendChild(tableArticle);
         }
-    })
+    });
 }

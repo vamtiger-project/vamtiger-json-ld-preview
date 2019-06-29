@@ -19,7 +19,7 @@ function default_1(params) {
                 requestIdleCallback(() => viewJsonLd(params).then(resolve));
             }
             else {
-                viewJsonLd(params).then(resolve);
+                setTimeout(() => viewJsonLd(params).then(resolve), 0);
             }
         });
     });
