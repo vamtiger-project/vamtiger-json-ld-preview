@@ -15,13 +15,13 @@ exports.default = () => describe('vamtiger-json-ld-viewer', function () {
     before(function () {
         return __awaiter(this, void 0, void 0, function* () {
             yield loadScript({
-                src: 'vamtiger-json-ld-viewer.js'
+                src: 'vamtiger-json-ld-viewer.js.json.js'
             });
         });
     });
     it.skip('load script', function () {
         return __awaiter(this, void 0, void 0, function* () {
-            const script = document.head.querySelector('[src="vamtiger-json-ld-viewer.js"]');
+            const script = document.head.querySelector('[src="vamtiger-json-ld-viewer.js.json.js"]');
             chai_1.expect(script instanceof HTMLScriptElement).to.be.true;
         });
     });

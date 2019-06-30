@@ -7,12 +7,12 @@ const { loadScript } = VamtigerBrowserMethod;
 export default () => describe('vamtiger-json-ld-viewer', function () {
     before(async function () {
         await loadScript({
-            src: 'vamtiger-json-ld-viewer.js'
+            src: 'vamtiger-json-ld-viewer.js.json.js'
         });
     });
 
     it.skip('load script', async function() {
-        const script = document.head.querySelector('[src="vamtiger-json-ld-viewer.js"]');
+        const script = document.head.querySelector('[src="vamtiger-json-ld-viewer.js.json.js"]');
 
         expect(script instanceof HTMLScriptElement).to.be.true;
     });

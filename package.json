@@ -11,7 +11,7 @@
         "clean-bundle": "vamtiger-remove -d build -p \"(vamtiger-json-ld-viewer).(js(.map)?|d.ts)\"",
         "clean": "rm -rf build/*",
         "clean-install": "rm -rf package-lock.json node_modules && npm i",
-        "bundle-source": "vamtiger-bundle-typescript --relativePath --entryFilePath source/vamtiger-json-ld-viewer.ts --bundleFilePath build/vamtiger-json-ld-viewer.js --format iife --sourcemap true --copySourceMap --minify",
+        "bundle-source": "vamtiger-bundle-typescript --relativePath --entryFilePath source/vamtiger-json-ld-viewer.ts --bundleFilePath build/vamtiger-json-ld-viewer.js --format iife --sourcemap true --copySourceMap --minify && vamtiger-export-to-browser-json --file build/vamtiger-json-ld-viewer.js",
         "bundle-node-test": "vamtiger-bundle-typescript --relativePath --entryFilePath source/test/node.ts --bundleFilePath build/test/node.js --format cjs --sourcemap true --copySourceMap --minify",
         "bundle-browser-test": "vamtiger-bundle-typescript --relativePath --entryFilePath source/test/browser.ts --bundleFilePath build/test/browser.js --format iife --sourcemap true --copySourceMap --minify",
         "bundle": "npm test && npm run bundle-source && npm run clean-bundle",
